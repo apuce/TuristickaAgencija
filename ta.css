@@ -11,29 +11,35 @@ body{
 	margin: 0 auto;
 	min-width: 500px;
 	max-width: 1300px;
-
+  padding-top: 2%;
+	background-image: url('slike/sky.png');
 }
 
 
 #logo {
 	float:left;
+	padding-top: 10;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .red{
-	padding: 10px;
+
 	width:100%;
 	float:left;
 	min-height: 1px;
 	border:3px;
 	border-style:solid;
-	border-color:#A02422;
-
+	border-color:#499DF5;
+	border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+overflow: auto;
 }
 
 .kolona{
 	display: inline-block;
 	float: left;
 	min-height: 20px;
+	overflow: auto;
 }
 
 .kolona:first-child{
@@ -46,6 +52,7 @@ body{
 
 .kolona.jedan{
 	width: 25%;
+	padding-left: 2%;
 }
 
 .kolona.dva{
@@ -55,6 +62,7 @@ body{
 
 .kolona.tri{
 	width: 75%;
+	padding-left: 2%;
 }
 
 .kolona.cetri{
@@ -63,12 +71,12 @@ body{
 
 .kolona.pet{
 	width: 33.3333%;
-	border: 2px solid #A02422;
+	border: 2px solid #499DF5;
 }
 
 .kolona.sest{
 	width: 16.6666%
-	border: 2px solid #A02422;
+	border: 2px solid #499DF5;
 }
 
 #main h2, #details h2{
@@ -90,31 +98,33 @@ body{
 }
 
 #pretraga{
-	margin: 0 auto;
+    margin-left: 2%;
     float: left;
 }
 
 
 h1{
 	font-family:Pacifico;
-  color: #A02422;
+  color: #499DF5;
 	text-align:center;
-	font-size:40;
+	font-size:50;
 	display:inline-block;
 }
 
 h3{
 	font-family:Neucha;
-  color: #A02422;
-	margin-top:45px;
+  color: #499DF5;
 	margin-left:150px;
 	text-align:center;
 	font-size:25px;
 	float:right;
+	margin-right:20px;
 }
 
+
 button{
-float:right;
+margin: 0 auto;
+display: block;
 }
 
 #info{
@@ -127,7 +137,6 @@ font-family: Neucha;
 }
 
 .dugmeDetalji {
-
 	position:relative;
 	left: 70%;
 	top: 5.40vw;
@@ -137,8 +146,9 @@ font-family: Neucha;
 #meni li{
 	display:inline-block;
 	margin-right:50px;
-	font-size:1.6vw;
+	font-size:120%;
 	font-family:Neucha;
+	font-weight: bold;
 
 }
 #meni li a{
@@ -146,19 +156,20 @@ font-family: Neucha;
 	color:black;
 }
 
+
 #meni li a:hover{
-	color: #A02422;
-	font-size:21;
-  font-weight: bold;
+	color: #0D4F8B;
+	font-size:120%;
+  font-weight:bolder;
 }
 
 #meni #trenutni{
-	color: #A02422;
-	font-weight: bold;
+	color: #0D4F8B;
+	font-weight: bolder;
 }
 
 #details li{
-	list-style-image: url(bullet_red.png);
+	list-style-image: url('slike/bullet_blue.ico');
 	font-family: Neucha;
 	font-weight: bold;
 }
@@ -178,8 +189,12 @@ font-family: Neucha;
 	float:right;
 }
 
+#datum{
+ display: inline;
+}
+
 #pocetna1{
-	background-image:url('http://www.planetware.com/photos-large/HR/croatia-dubrovnik-city-walls.jpg');
+	background-image:url('slike/pocetna1.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -187,7 +202,7 @@ font-family: Neucha;
 }
 
 #pocetna2{
-	background-image:url('http://7606-presscdn-0-74.pagely.netdna-cdn.com/wp-content/uploads/2016/05/Dubai-Property-Dubai-Real-Estate-Yellow-Pages-Directory.jpg');
+	background-image:url('slike/pocetna2.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -195,7 +210,7 @@ font-family: Neucha;
 }
 
 #pocetna3{
-	background-image:url('http://www.kompas.hr/PhotoGallery/Formati/2774_Velika.JPG');
+	background-image:url('slike/pocetna3.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -203,7 +218,7 @@ font-family: Neucha;
 }
 
 #pocetna4{
-	background-image:url('http://www.kompas.hr/PhotoGallery/Formati/2774_Velika.JPG');
+	background-image:url('slike/pocetna4.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -214,7 +229,7 @@ font-family: Neucha;
 
 
 #ponuda1{
-	background-image:url('http://www.nermaris.ba/wp-content/uploads/2015/08/Venecija1.jpg');
+	background-image:url('slike/ponuda1.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -222,7 +237,7 @@ font-family: Neucha;
 }
 
 #ponuda2{
-	background-image:url('https://i.ytimg.com/vi/_cMeBwyAfIQ/maxresdefault.jpg');
+	background-image:url('slike/ponuda2.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -230,7 +245,7 @@ font-family: Neucha;
 }
 
 #ponuda3{
-	background-image:url('http://www.helona.rs/v2/wp-content/uploads/2015/09/atina.jpg');
+	background-image:url('slike/ponuda3.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -239,7 +254,7 @@ font-family: Neucha;
 }
 
 #izlet1{
-	background-image:url('http://travelbusinessexplore.weebly.com/uploads/1/2/0/6/12063713/2797549.jpg?923');
+	background-image:url('slike/izlet1.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -248,7 +263,7 @@ font-family: Neucha;
 }
 
 #izlet2{
-	background-image:url('http://tgportal.net/wp-content/uploads/2016/02/jajce.jpg');
+	background-image:url('slike/izlet2.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -256,7 +271,7 @@ font-family: Neucha;
 }
 
 #izlet3{
-	background-image:url('http://www.kompas.hr/PhotoGallery/Formati/36891_Velika_Grand-hotel-Neum.JPG');
+	background-image:url('slike/izlet3.jpg');
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
@@ -271,9 +286,9 @@ h2, h4{
 }
 
 #footer{
-	background-image:url('http://static.tumblr.com/76656c275a2ecc49cfe82675e954b138/146m83y/aP4moy1eu/tumblr_static_tumblr_mho62cs6aw1rjeb8co1_500.gif');
-
+	background-image:url('slike/ptice.gif');
 }
+
 #voting{
 	color:black;
 	font-style:Arial;
@@ -290,7 +305,7 @@ h2, h4{
 }
 
 #header{
-	background-image:url('http://static.tumblr.com/76656c275a2ecc49cfe82675e954b138/146m83y/aP4moy1eu/tumblr_static_tumblr_mho62cs6aw1rjeb8co1_500.gif');
+	background-image:url('slike/ptice.gif');
 }
 
 
@@ -332,6 +347,15 @@ h2, h4{
 	display:block;
 }
 
+h1{
+	padding-left: 4%;
+}
+
+#datum{
+	margin-left: 25%;
+}
+
+
 }
 
 @media screen and (min-width:2500px){
@@ -352,7 +376,7 @@ h2, h4{
 	min-height: 1px;
 	border:3px;
 	border-style:solid;
-	border-color:#A02422;
+	border-color:#499DF5;
 
 }
 
