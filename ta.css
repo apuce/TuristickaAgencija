@@ -17,9 +17,6 @@ body{
 	height: 100%;
 }
 
-
-
-
 #logo {
 	float:left;
 	padding-top: 10;
@@ -28,7 +25,6 @@ body{
 }
 
 .red{
-
 	width:100%;
 	float:left;
 	min-height: 1px;
@@ -129,7 +125,7 @@ margin: 0 auto;
 display: block;
 }
 
-#info{
+#info1, #info2, #info3{
 display: inline-block;
 }
 
@@ -137,13 +133,6 @@ display: inline-block;
 font-weight: bold;
 font-family: Neucha;
 }
-
-.dugmeDetalji {
-	position:relative;
-	left: 70%;
-	top: 5.40vw;
-}
-
 
 #meni li{
 	display:inline-block;
@@ -200,7 +189,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:50%;
+	height:300px;
 }
 
 #pocetna2{
@@ -208,7 +197,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:50%;
+	height:300px;
 }
 
 #pocetna3{
@@ -216,7 +205,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:50%;
+	height:300px;
 }
 
 #pocetna4{
@@ -224,7 +213,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:50%;
+	height:300px;
 }
 
 
@@ -234,7 +223,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:33.333%;
+	height:200px;
 }
 
 #ponuda2{
@@ -242,7 +231,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:33.333%;
+	height:200px;
 }
 
 #ponuda3{
@@ -250,7 +239,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:33.333%;
+	height:200px;
 
 }
 
@@ -259,7 +248,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:33.333%;
+	height:200px;
 
 }
 
@@ -268,7 +257,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:33.333%;
+	height:200px;
 }
 
 #izlet3{
@@ -276,7 +265,7 @@ font-family: Neucha;
 	background-size:cover;
 	max-width:100%;
 	max-height:100%;
-	height:33.333%;
+	height:200px;
 
 }
 
