@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Turistička agencija</TITLE>
+ <link rel="shortcut icon" type="image/x-icon" href="slike/icon.png" />
+<link rel="stylesheet" type="text/css" href="ta.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</HEAD>
+<BODY>
+
+  <script src="tAgencija.js"></script>
+
+<div id="header" class="red">
+<img id="logo" src="slike/sun.png" alt="">
+<h1> amina. </h1>
+<h3> -putujte sa nama! </h3>
+</div>
+
+<div id="meni" class="red">
+
+		<ul>
+		<li><a href="#" id="option1" onclick="ucitaj('NaslovnaTA')" >Naslovna</a></li>
+		<li><a href="#" id="option2" onclick="ucitaj('OnamaTA')" >O nama</a></li>
+		<li><a href="#" id="option3" onclick="ucitaj('PonudeTA')" >Aktuelne ponude</a></li>
+		<li><a href="#" id="option4" onclick="ucitaj('IzletiTA')" >Izleti</a></li>
+		<li><a href="#" id="option5" onclick="ucitaj('KontaktTA')" >Kontakt</a></li>
+
+		</ul>
+</div>
+
+<div id="stranica">
+
+
+  	<div class="kolona dva">
+
+  		<div id="pocetna1" class="red">
+  		<h2>DUBROVNIK</h2>
+  		<h4>Doček Nove 2017. Godine!!</h4>
+  		<button> Detalji >> </button>
+  		</div >
+
+  		<div id="pocetna2" class="red">
+  		<h2>DUBAI</h2>
+  		<h4>već od 1500 KM!!</h4>
+  		<button> Detalji >> </button>
+  		</div>
+  	</div>
+
+  	<div class="kolona dva">
+  		<div id="pocetna3" class="red">
+  		<h2>BUDIMPEŠTA</h2>
+  		<h4>3 dana, za samo 149 KM!!</h4>
+  		<button> Detalji >> </button>
+  		</div >
+
+  		<div id="pocetna4" class="red">
+  		<h2>RIM</h2>
+  		<h4>3 dana, za samo 300 KM!!</h4>
+  		<button> Detalji >> </button>
+  		</div>
+
+  </div>
+
+  <div id="footer" class="red">
+
+  <div class="kolona jedan">
+  <form id="voting">
+  <table>
+  <tr>
+  <td>Ocijenite usluge agencije "amina."</td>
+  </tr>
+  <tr>
+  <td><input type="radio" name="vote" value="jedan" checked="true"> 1<br><td>
+  </tr>
+  <tr>
+  <td><input type="radio" name="vote" value="dva"> 2<br></td>
+  </tr>
+  <tr>
+  <td><input type="radio" name="vote" value="tri"> 3<br></td>
+  </tr>
+  <tr>
+  <td><input type="radio" name="vote" value="cetiri"> 4<br></td>
+  </tr>
+  <tr>
+  <td><input type="radio" name="vote" value="pet"> 5<br></td>
+  </tr>
+  <tr>
+  <td><button id="dugme" name="klik">Glasaj</button></td>
+  </tr>
+  </table>
+  </form>
+  </div>
+
+  <div class="kolona jedan">
+  </div>
+
+  <div class="kolona jedan">
+  </div>
+
+
+  </div>
+
+
+</div>
+
+</BODY>
+</HTML>
