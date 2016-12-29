@@ -88,31 +88,7 @@ header("location: profile.php");
 </div>
 
 
-<div class="red">
-  <div class="kolona pet">
-  <div id="izlet1">
-    <h2>MOSTAR</h2>
-    <h4>15KM!!</h4>
-      <button>Detalji >> </button>
-  </div>
-  </div>
 
-  <div class="kolona pet">
-    <div id="izlet2">
-      <h2>JAJCE</h2>
-      <h4>15KM!!</h4>
-        <button>Detalji >> </button>
-    </div>
-  </div>
-
-  <div class="kolona pet">
-    <div id="izlet3">
-      <h2>NEUM</h2>
-      <h4>20KM!!</h4>
-        <button>Detalji >> </button>
-    </div>
-  </div>
-</div>
 
 <div id="footer" class="red">
   <div class="kolona tri">
