@@ -77,53 +77,16 @@ body{
 	border: 2px solid #499DF5;
 }
 
-.kolona.sedam{
-	width: 4.155%
-}
-
-.kolona.pom{
-	width: 84.444%
-}
-
-#main h2{
+#main h2, #details h2{
 	color:black;
 	float:left;
 
 }
-
-#details h2{
-	color:black;
-	float:center;
-
-}
-
-#greska{
-	width: 15px;
-	height: 15px;
-}
-
-#greskaTekst{
-	color:red;
-	margin-top: -18px;
-	margin-left: 20px;
-	margin-bottom: 0;
-}
-
-#detaljiS #move img{
-width: 35px;
-height: 35px;
-}
-
 
 #main p{
 	color:black;
 	float:left;
 
-}
-
-#move{
-	margin-left:30%;
-	margin-right:auto;
 }
 
 #details p{
@@ -135,10 +98,6 @@ height: 35px;
 #pretraga{
     margin-left: 2%;
     float: left;
-}
-
-.hideable {
-    display: none;
 }
 
 
@@ -164,17 +123,6 @@ h3{
 button{
 margin: 0 auto;
 display: block;
-}
-
-.dugmad{
-	margin: 0 auto;
-	display: block;
-	text-align: center;
-}
-
-#detaljiButton{
-	margin: 0 auto;
-	display: block;
 }
 
 #info1, #info2, #info3{
@@ -286,22 +234,6 @@ font-family: Neucha;
 	height:200px;
 }
 
-#detaljiS ul{
-	list-style-type: none;
-}
-#detaljiS img {
-    width: 400px;
-    height: 250px;
-
-}
-
-.direction img{
-	width:15px;
-	height: 15px;
-}
-
-
-
 #ponuda3{
 	background-image:url('slike/ponuda3.jpg');
 	background-size:cover;
@@ -344,7 +276,7 @@ h2, h4{
 }
 
 #footer{
-	/*background-image:url('slike/ptice.gif');*/
+	background-image:url('slike/ptice.gif');
 }
 
 #voting{
@@ -363,7 +295,7 @@ h2, h4{
 }
 
 #header{
-/*	background-image:url('slike/ptice.gif');*/
+	background-image:url('slike/ptice.gif');
 }
 
 
@@ -397,15 +329,6 @@ h2, h4{
 		width: 100%;
 		}
 
-#detaljiS img {
-	width: 100%;
-	height: 250px;
-	margin-left: -20px;
-}
-
-#detaljiS #move img{
-	margin-left: 0;
-}
 
 #meni li{
 	margin-right:50px;
@@ -466,12 +389,6 @@ h1{
 	font-size:20;
 	font-family:Neucha;
 	display:inline-block;
-}
-
-#detaljiS img {
-	width: 100%;
-	height: 250px;
-
 }
 
 }
