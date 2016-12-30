@@ -10,14 +10,15 @@ $mail=$_GET["email"];
 $kom=$_GET["area"];
 
 $koment=htmlentities($kom, ENT_COMPAT, 'UTF-8');
-if(preg_match('/^\S+@\S+$/', $mail) ){
+
+if(preg_match('/^\S+@\S+$/', $mail) && !empty($koment)){
 
 $infoTag=$xml->createElement("poruka");
-$nameTag=$xml->createElement("email", $mail);
-$addTag=$xml->createElement("komentar", $koment);
+$mailTag=$xml->createElement("email", $mail);
+$komTag=$xml->createElement("komentar", $koment);
 
-$infoTag->appendChild($nameTag);
-$infoTag->appendChild($addTag);
+$infoTag->appendChild($mailTag);
+$infoTag->appendChild($komTag);
 
 $rootTag->appendChild($infoTag);
 $xml->save('poruke.xml');

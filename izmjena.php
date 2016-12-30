@@ -46,6 +46,13 @@ if (isset($_POST["submitIz".$i])){
   $naziv=$_POST["noviNaziv"];
   $destinacija=$_POST["novaDestinacija"];
 
+  if(empty($destinacija) || empty($naziv)){
+
+    echo '<p style="color:red">Naziv i opis ponude ne mogu biti prazna polja!</p>';
+
+  }
+  else{
+
   $destinacija=htmlentities($destinacija, ENT_COMPAT, 'UTF-8');
   $naziv=htmlentities($naziv, ENT_COMPAT, 'UTF-8');
 
@@ -66,5 +73,5 @@ $xmldoc->save('ponude.xml');
 }
 }
 }
-
+}
 ?>

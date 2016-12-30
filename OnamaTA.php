@@ -47,7 +47,7 @@ header("location: profile.php");
 
       </tr>
       <tr>
-        <td><input name="submit" type="submit" value=" Login "></td>
+        <td><input name="submit" type="submit" value=" Prijava "></td>
       </tr>
     </table>
       <span><?php echo $error; ?></span>
@@ -79,7 +79,7 @@ i sugestije, kako bi bili bolji i približili se onome što se zove vrh.</p>
 <div id="footer" class="red">
 
   <div class="kolona jedan">
-  <form id="voting">
+  <form id="voting" action="" method="post">
   <table>
   <tr>
   <td>Ocijenite usluge agencije "amina."<br></td>
@@ -100,7 +100,7 @@ i sugestije, kako bi bili bolji i približili se onome što se zove vrh.</p>
   <td><input type="radio" name="vote" value="pet"> 5<br></td>
   </tr>
   <tr>
-  <td><button id="dugme" name="klik">Glasaj</button></td>
+  <td><input type="submit" value="Glasaj" name="submitAnketa"> </td>
   </tr>
   </table>
   </form>

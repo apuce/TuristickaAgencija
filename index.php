@@ -49,7 +49,7 @@ header("location: profile.php");
 
       </tr>
       <tr>
-        <td><input name="submit" type="submit" value=" Login "></td>
+        <td><input name="submit" type="submit" value=" Prijava "></td>
       </tr>
     </table>
       <span><?php echo $error; ?></span>

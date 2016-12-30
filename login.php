@@ -27,8 +27,8 @@ $pronadjen=false;
 foreach($xml->korisnik as $korisnik){
  if($username==$korisnik->username && md5($password)==$korisnik->password)
  {
-   $_SESSION['login_user']=$username; // Initializing Session
-   header("location: ".$korisnik->profil); // Redirecting To Other Page
+   $_SESSION['login_user']=$username;
+   header("location: ".$korisnik->profil); 
    $pronadjen=true;
  }
 }

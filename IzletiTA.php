@@ -47,7 +47,7 @@ header("location: profile.php");
 
       </tr>
       <tr>
-        <td><input name="submit" type="submit" value=" Login "></td>
+        <td><input name="submit" type="submit" value=" Prijava "></td>
       </tr>
     </table>
       <span><?php echo $error; ?></span>
@@ -91,28 +91,6 @@ header("location: profile.php");
 
 
 <div id="footer" class="red">
-  <div class="kolona tri">
-    <form id="voting">
-    <table>
-    <tr>
-    <td>Koji grad bi voljeli da uključimo u našu ponudu?</td>
-    </tr>
-    <tr>
-    <td><input type="radio" name="vote1" value="jedan" id="jedan"> Travnik<br><td>
-    </tr>
-    <tr>
-    <td><input type="radio" name="vote2" value="dva" id="dva" > Bihać<br></td>
-    </tr>
-    <tr>
-    <td><input type="radio" name="vote3" value="tri" id="tri"> Konjic<br></td>
-    </tr>
-    <tr>
-    <td><button type="button" id="dugme" name="klik" onclick="provjeraAnkete2()">Glasaj</button></td>
-    </tr>
 
-    </table>
-    </form>
-
-  </div>
 
 </div>
