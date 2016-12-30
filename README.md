@@ -24,9 +24,9 @@ Projektni zadatak - Web Tehnologije
 ### V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi
 
 index.php - početni fajl, na njemu je sada omogućen i login admina, i prikazuju se 4 ponude agencije iz XML fajla.  
-OnamaTA.php - informacije o agenciji
-PonudeTA.php - prikazuju se sve ponude, omogućena pretraga ponuda (livesearch)
-IzletiTA.php - u budućnosti se mogu izdvojiti iz ponuda izleti po BiH, na podstranici bi bile iste funkcionalnosti kao na PonudeTA.php
+OnamaTA.php - informacije o agenciji  
+PonudeTA.php - prikazuju se sve ponude, omogućena pretraga ponuda (livesearch)  
+IzletiTA.php - u budućnosti se mogu izdvojiti iz ponuda izleti po BiH, na podstranici bi bile iste funkcionalnosti kao na PonudeTA.php  
 KontaktTA.php - mogućnost slanja poruka agenciji, sada se sve poruke spašavaju u XML.
 profile.php - adminov profil
 
