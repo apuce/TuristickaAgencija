@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<korisnici>
+<korisnik>
+<username>admin</username>
+<password>202cb962ac59075b964b07152d234b70</password>
+<profil>profile.php</profil>
+</korisnik>
+</korisnici>

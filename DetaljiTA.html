@@ -1,0 +1,82 @@
+<?php
+include('login.php'); // Includes Login Script
+include('dodajRezultat.php');
+if(isset($_SESSION['login_user'])){
+header("location: profile.php");
+}
+?>
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Turistička agencija</TITLE>
+ <link rel="shortcut icon" type="image/x-icon" href="slike/icon.png" />
+<link rel="stylesheet" type="text/css" href="ta.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</HEAD>
+<BODY>
+
+  <script src="tAgencija.js"></script>
+
+<div id="header" class="red">
+<img id="logo" src="slike/sun.png" alt="">
+<h1> amina. </h1>
+<h3> -putujte sa nama! </h3>
+</div>
+
+
+<div id="details" class="red">
+  <h2>Venecija 4 dana</h2>
+  <div class="red">
+    <div id="detaljiS" class="kolona dva">
+
+<ul>
+  <li id="1" class="hideable" style="display:block"><img src="slike/ponuda1.jpg"></li>
+  <li id="2" class="hideable"><img src="slike/venecija2.jpg"></li>
+  <li id="3" class="hideable"><img src="slike/venecija3.jpg"></li>
+</ul>
+<table id="move">
+  <tr>
+<td><img type="button" id="preButton" onclick="SlideShow(false)" src="slike/prev.png"></img></td>
+<td><p></p></td>
+<td><img type="button" id="sljButton" onclick="SlideShow(true)"src="slike/next.png"></img></td>
+</tr>
+</table>
+</div>
+
+    <div class="kolona dva">
+      <ul>
+        <li>Datum: &nbsp; 24.11.2016. i 13.01.2017.</li>
+
+        <li>Država: &nbsp; Italija</li>
+
+        <li>Cijena:&nbsp; 99KM </li>
+      </ul>
+      <button id="rezervacija">REZERVIŠI</button>
+    </div>
+  </div>
+
+    <p> Venecija (“Kraljica Jadrana”, “Nevjesta mora”, “Grad mostova”, “Grad vode”) ili već kako god je zvali,
+      izgrađena na 118 malih ostrva u laguni, sa kanalima umjesto ulica, sa nizom crkava i palata prvorazredne vrijednosti,
+      koji predstavljaju jedinstven urbani sklop – jednostavno je grad koji morate vidjeti i doživjeti
+      u svoj njegovoj intrigantnosti. Zbog svega toga Venecija i njeni kanali proglašeni su spomenikom Svjetske baštine UNESCO-a. </p>
+
+      <div id="details2" class="kolona cetri">
+        <h4>1.DAN putovanje (Petak) SARAJEVO – BANJA LUKA – LIDO DI JESOLO (okolina)</h4>
+      Sastanak grupe u 16.30 h ispred Zemaljskog muzeja u Sarajevu i polazak u 17.00 h (Zenica – 18.15h, Doboj 19.45h, Banja Luka 22.00h). Vožnja autobusom kroz Hrvatsku i Sloveniju sa kraćim zadržavanjima radi odmora. Noćna vožnja.
+
+      <h4>2.DAN putovanje (Subota) LIDO DI JESOLO (okolina)</h4>
+      Dolazak u luku Punta Sabioni u prijepodnevnim satima. Kraća vožnja brodićem do venecijanske rive (uz doplatu) i po iskrcavanju šetnja gradom: Trg Svetog Marka, Bazilika, Duždeva Palata, most Rialto, most Uzdisaja… Slobodno vrijeme za individualna razgledanja. U dogovoreno vrijeme sastanak sa vodičem na venecijanskoj rivi. Odlazak do hotela i smještaj u hotel. NOĆENJE.
+
+      <h4>3.DAN (Nedjelja) LIDO DI JESOLO (okolina) – VERONA – PADOVA – BANJA LUKA – SARAJEVO</h4>
+      DORUČAK. Slobodno vrijeme za individulane aktivnosti ili fakultativni izlet za Veronu i Padovu : grad Romea i Julije: Trg Bra, Arena, Gospodski trg, palata i grobnica porodice Skalideri, Romeova kuća, Julijin balkon… U povratku obilazak Padove u pratnji turističkog vodiča: Trg Prato del Vale, bazilika Sv. Antonia, kapela Skrovenji, Palata pravde, trg Erbe. Polazak za BiH u ranim večernjim satima. Noćna vožnja kroz Sloveniju i Hrvatsku.
+
+      <h4>4. DAN putovanja (Ponedjeljak) – SARAJEVO</h4>
+      Dolazak na odredište u jutarnjim satima (u zavisnosti od uslova na putu i graničnim prijelazima ).
+      </div>
+
+</div>
+
+</body>
+</html>

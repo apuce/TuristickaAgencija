@@ -23,17 +23,31 @@ $xmldoc->load('korisnici.xml');
 
 $xml=simplexml_load_file("korisnici.xml") or die("Error: Cannot create object");
 
-$pronadjen=false;
-foreach($xml->korisnik as $korisnik){
+//$pronadjen=false;
+/*foreach($xml->korisnik as $korisnik){
  if($username==$korisnik->username && md5($password)==$korisnik->password)
  {
    $_SESSION['login_user']=$username;
-   header("location: ".$korisnik->profil); 
+   header("location: ".$korisnik->profil);
    $pronadjen=true;
  }
+}*/
+
+$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
+$veza->exec("set names utf8");
+
+$upit = $veza->prepare("SELECT * FROM korisnik WHERE username=:us");
+$upit->bindParam(':us', $username);
+$upit->execute();
+
+$rezultat=$upit->fetch();
+if($rezultat['password']==$password){
+    $_SESSION['login_user']=$username;
+    header("location: ".$rezultat['profile']);
+
 }
 
-if($pronadjen==false) {
+if($upit->fetch()==null) {
 $error = "Username/Password nije validan!";
 }
 

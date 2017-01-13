@@ -1,0 +1,480 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Neucha);
+
+
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	width: 100%;
+	margin: 0 auto;
+	min-width: 500px;
+	max-width: 1300px;
+  padding-top: 2%;
+	background-image: url('slike/sky.png');
+	height: 100%;
+}
+
+#logo {
+	float:left;
+	padding-top: 10;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.red{
+	width:100%;
+	float:left;
+	min-height: 1px;
+	border:3px;
+	border-style:solid;
+	border-color:#499DF5;
+	border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  overflow: auto;
+}
+
+.kolona{
+	display: inline-block;
+	float: left;
+	min-height: 20px;
+}
+
+.kolona:first-child{
+	margin-left: 0px;
+}
+
+.kolona:last-child{
+	margin-right: 0px;
+}
+
+.kolona.jedan{
+	width: 25%;
+	padding-left: 2%;
+}
+
+.kolona.dva{
+	width: 50%;
+}
+
+.kolona.tri{
+	width: 75%;
+	padding-left: 2%;
+}
+
+.kolona.cetri{
+	width: 100%;
+}
+
+.kolona.pet{
+	width: 33.3333%;
+	border: 2px solid #499DF5;
+}
+
+.kolona.sest{
+	width: 16.6666%
+	border: 2px solid #499DF5;
+}
+
+.kolona.sedam{
+	width: 4.155%
+}
+
+.kolona.pom{
+	width: 84.444%
+}
+
+#main h2{
+	color:black;
+	float:left;
+
+}
+
+#details h2{
+	color:black;
+	float:center;
+
+}
+
+#greska{
+	width: 15px;
+	height: 15px;
+}
+
+#greskaTekst{
+	color:red;
+	margin-top: -18px;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+#detaljiS #move img{
+width: 35px;
+height: 35px;
+}
+
+
+#main p{
+	color:black;
+	float:left;
+
+}
+
+#move{
+	margin-left:30%;
+	margin-right:auto;
+}
+
+#details p{
+	color:black;
+	float:left;
+  text-align: left;
+}
+
+#pretraga{
+    margin-left: 2%;
+    float: left;
+}
+
+.hideable {
+    display: none;
+}
+
+
+h1{
+	font-family:Pacifico;
+  color: #499DF5;
+	text-align:center;
+	font-size:50;
+	display:inline-block;
+}
+
+h3{
+	font-family:Neucha;
+  color: #499DF5;
+	margin-left:150px;
+	text-align:center;
+	font-size:25px;
+	float:right;
+	margin-right:20px;
+}
+
+
+button{
+margin: 0 auto;
+display: block;
+}
+
+.dugmad{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+#detaljiButton{
+	margin: 0 auto;
+	display: block;
+}
+
+#info1, #info2, #info3{
+display: inline-block;
+}
+
+#kontakt p{
+font-weight: bold;
+font-family: Neucha;
+}
+
+#meni li{
+	display:inline-block;
+	margin-right:50px;
+	font-size:120%;
+	font-family:Neucha;
+	font-weight: bold;
+
+}
+#meni li a{
+	text-decoration:none;
+	color:black;
+}
+
+
+#meni li a:hover{
+	color: #0D4F8B;
+	font-size:120%;
+  font-weight:bolder;
+}
+
+#meni #trenutni{
+	color: #0D4F8B;
+	font-weight: bolder;
+}
+
+#details li{
+	list-style-image: url('slike/bullet_blue.ico');
+	font-family: Neucha;
+	font-weight: bold;
+}
+
+#rezervacija {
+	font-weight: bold;
+	padding: 10px;
+	font-family: Arial;
+}
+
+#details2 h4{
+	font-weight: bold;
+	color:black;
+}
+
+#pret{
+	float:right;
+}
+
+#datum{
+ display: inline;
+}
+
+#pocetna1{
+	background-image:url('slike/pocetna1.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:300px;
+}
+
+#pocetna2{
+	background-image:url('slike/pocetna2.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:300px;
+}
+
+#pocetna3{
+	background-image:url('slike/pocetna3.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:300px;
+}
+
+#pocetna4{
+	background-image:url('slike/pocetna4.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:300px;
+}
+
+
+
+#ponuda1{
+	background-image:url('slike/ponuda1.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:200px;
+}
+
+#ponuda2{
+	background-image:url('slike/ponuda2.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:200px;
+}
+
+#detaljiS ul{
+	list-style-type: none;
+}
+#detaljiS img {
+    width: 400px;
+    height: 250px;
+
+}
+
+.direction img{
+	width:15px;
+	height: 15px;
+}
+
+
+
+#ponuda3{
+	background-image:url('slike/ponuda3.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:200px;
+
+}
+
+#izlet1{
+	background-image:url('slike/izlet1.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:200px;
+
+}
+
+#izlet2{
+	background-image:url('slike/izlet2.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:200px;
+}
+
+#izlet3{
+	background-image:url('slike/izlet3.jpg');
+	background-size:cover;
+	max-width:100%;
+	max-height:100%;
+	height:200px;
+
+}
+
+h2, h4{
+	text-align:center;
+	color:white;
+	font-family:Neucha;
+}
+
+#footer{
+	/*background-image:url('slike/ptice.gif');*/
+}
+
+#voting{
+	color:black;
+	font-style:Arial;
+	text-decoration:bold;
+}
+
+#voting2{
+	color:black;
+	margin:0 auto;
+}
+
+#dugme{
+	float:left;
+}
+
+#header{
+/*	background-image:url('slike/ptice.gif');*/
+}
+
+
+@media screen and (max-width: 700px) {
+
+	body{
+	width: 100%;
+	margin: 0 auto;
+	min-width: 50px;
+	max-width: 700px;
+
+}
+
+    .kolona.jedan{
+		width: 100%;
+		}
+
+		.kolona.dva{
+		width:100%;
+		}
+
+		.kolona.tri{
+		width:100%;
+		}
+
+		.kolona.dva{
+		width:100%;
+		}
+
+		.kolona.pet{
+		width: 100%;
+		}
+
+#detaljiS img {
+	width: 100%;
+	height: 250px;
+	margin-left: -20px;
+}
+
+#detaljiS #move img{
+	margin-left: 0;
+}
+
+#meni li{
+	margin-right:50px;
+	font-size:20;
+	font-family:Neucha;
+	display:block;
+}
+
+h1{
+	padding-left: 4%;
+}
+
+#datum{
+	margin-left: 25%;
+}
+
+
+}
+
+@media screen and (min-width:2500px){
+
+	body{
+  align: center;
+	width: 50%;
+	margin: 0 auto;
+	min-width: 2500px;
+	max-width: 5000px;
+
+}
+
+.red{
+	padding: 10px;
+	width:100%;
+	float:left;
+	min-height: 1px;
+	border:3px;
+	border-style:solid;
+	border-color:#499DF5;
+
+}
+
+.kolona{
+	display: inline-block;
+	float: left;
+}
+
+	  .kolona.jedan{
+		width: 25%;
+		}
+
+		.kolona.dva{
+		width:50%;
+		}
+
+
+#meni li{
+	margin-right:50px;
+	font-size:20;
+	font-family:Neucha;
+	display:inline-block;
+}
+
+#detaljiS img {
+	width: 100%;
+	height: 250px;
+
+}
+
+}
+
+
+}

@@ -118,6 +118,7 @@ function showResult(s) {
 <div class="red">
   <?php
   if (isset($_GET["submitPretraga"])) {
+    /*
   $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
   $brojac=0;
   $nazivPonude=$_GET["kljucnaRijec"];
@@ -133,10 +134,35 @@ function showResult(s) {
      $brojac=$brojac+1;
    }
 
- }
- }
- else{
+ }*/
+ $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+ $veza->exec("set names utf8");
+ $brojac=0;
+ $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
+ if (!$rezultat) {
+        $greska = $veza->errorInfo();
+        print "SQL greška: " . $greska[2];
+        exit();
+   }
 
+$nazivPonude=$_GET["kljucnaRijec"];
+ foreach($rezultat as $ponuda) {
+   if (strpos($ponuda["naziv"], $nazivPonude)!==false || strpos($ponuda["opis"], $nazivPonude)!==false){
+   if($brojac%2==0){echo '<div class="kolona dva"> ';}
+   echo '<div id="pocetna1" class="red" style="background-image:url(slike/'.$ponuda["slika"].'")"> ';
+   echo '<h2>' . $ponuda["naziv"] . '</h2>';
+   echo '<h4>' . $ponuda["opis"] . '</h4>';
+   //echo '<form action="" method="get"> <input type="submit" value="Detalji" class="dugmad" name="submitDetalji'.$ponuda["id"].'"> </form><br>';
+   echo '<a href=DetaljiTA.php?id_detalji='.$ponuda["id"].'><button>Detalji </button></a>';
+   echo '</div>';
+   if($brojac%2==1){echo '</div>';}
+   $brojac=$brojac+1;
+ }
+ }
+ }
+
+ else{
+/*
    $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
    $brojac=0;
 
@@ -149,13 +175,59 @@ function showResult(s) {
      if($brojac%2==1){echo '</div>';}
      $brojac=$brojac+1;
    }
+   */
+
+   $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+   $veza->exec("set names utf8");
+   $brojac=0;
+   $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
+   if (!$rezultat) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
+   foreach($rezultat as $ponuda) {
+     if($brojac%2==0){echo '<div class="kolona dva"> ';}
+     echo '<div id="pocetna1" class="red" style="background-image:url(slike/'.$ponuda["slika"].'")"> ';
+     echo '<h2>' . $ponuda["naziv"] . '</h2>';
+     echo '<h4>' . $ponuda["opis"] . '</h4>';
+    // echo '<form action="" method="get"> <input type="submit" value="Detalji" class="dugmad" name="submitDetalji'.$ponuda["id"].'"> </form><br>';
+     echo '<a href=DetaljiTA.php?id_detalji='.$ponuda["id"].'><button>Detalji </button></a>';
+     echo '</div>';
+     if($brojac%2==1){echo '</div>';}
+     $brojac=$brojac+1;
  }
+ }
+     ?>
 
+<?php
+$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza->exec("set names utf8");
 
+$idPosljednje=0;
+$rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
 
+if (!$rezultat) {
+       $greska = $veza->errorInfo();
+       print "SQL greška: " . $greska[2];
+       exit();
+  }
 
-  ?>
+  foreach ($rezultat as $ponuda) {
+    $idPosljednje=$ponuda["id"];
+  }
+
+  for($a=1; $a<$idPosljednje+1; $a++){
+  if (isset($_GET["submitDetalji".$a])) {
+
+    $id_detalji=$a;
+    header("location: DetaljiTA.php?id_detalji=".$a);
+
+  }
+}
+   ?>
 </div>
+
 
 
 </BODY>

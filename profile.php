@@ -45,6 +45,8 @@ include('downloadCSV.php');
   <td>  <a href="downloadPDF.php" > <img src="slike/buttonDownloadPDF.png" alt=""></a> </td>&nbsp;&nbsp;
   <td>  <a href="prikaziPoruke.php"> <img src="slike/buttonPoruke.png" alt=""></a> </td>&nbsp;&nbsp;
   <td>  <a href="prikaziOcjene.php"> <img src="slike/buttonAnketa.png" alt=""></a> </td>
+  <td>  <a href="prebaciUbazu.php"> <img src="slike/buttonPrebaci.png" alt=""></a> </td>
+    <td>  <a href="prikaziRezervacije.php"> <img src="slike/buttonRezervacije.png" alt=""></a> </td>
 
   </tr>
 <br>
@@ -67,6 +69,15 @@ include('downloadCSV.php');
 </tr>
 <tr>
           <td>Opis nove ponude: <br><input type="text" name="nazivPonude" id="nazivPonude"></input></td>
+
+        </tr>
+
+        <tr>
+          <td>Detaljan opis ponude: <br><input type="text" name="opisPonude" id="opisPonude"></input></td>
+        </tr>
+
+        <tr>
+          <td>Cijena ponude: <br><input type="number" name="cijenaPonude" id="opisPonude"></input></td>
         </tr>
 
         <tr>
@@ -74,15 +85,47 @@ include('downloadCSV.php');
             <input type="file" name="photo"> <br>
           </td>
         </tr>
+        <tr>
+          <td>Dodajte jos neke slike:</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="file" name="photo2"> <br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="file" name="photo3"> <br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="file" name="photo4"> <br>
+          </td>
+        </tr>
 
         <tr>
           <td>
             <?php
+            /*
             $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
             $id=0;
             foreach($xml->ponuda as $ponuda){
               $id=$ponuda->id;
-            }
+            }*/
+
+            $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+            $veza->exec("set names utf8");
+            $id=0;
+            $rezultat = $veza->query("select id from ponuda");
+            if (!$rezultat) {
+                   $greska = $veza->errorInfo();
+                   print "SQL greška: " . $greska[2];
+                   exit();
+              }
+          foreach($rezultat as $ponuda) {
+            $id=$ponuda["id"];
+          }
             ?>
             <input type="text" name="idPonude" value = "<?php echo (isset($id))?$id+1:'';?>" readonly>
           </td>
@@ -101,6 +144,7 @@ include('downloadCSV.php');
 <div id="stranica">
 
 <?php
+/*
 $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
 $brojac=0;
 foreach($xml->ponuda as $ponuda){
@@ -114,7 +158,31 @@ foreach($xml->ponuda as $ponuda){
   echo '</div>';
   if($brojac%2==1){echo '</div>';}
   $brojac=$brojac+1;
+}*/
+
+$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza->exec("set names utf8");
+$brojac=0;
+$rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
+if (!$rezultat) {
+       $greska = $veza->errorInfo();
+       print "SQL greška: " . $greska[2];
+       exit();
+  }
+foreach($rezultat as $ponuda) {
+  if($brojac%2==0){echo '<div class="kolona dva"> ';}
+  echo '<div id="pocetna1" class="red" style="background-image:url(slike/'.$ponuda["slika"].'")"> ';
+  echo '<h2>' . $ponuda["naziv"] . '</h2>';
+  echo '<h4>' . $ponuda["opis"] . '</h4>';
+  $br=$ponuda["id"];
+  echo '<form action="" method="post"> <input type="submit" value="Izbrisi" class="dugmad" name="submitObrisi'.$br.'"> </form><br>';
+  echo '<form action="" method="post"> <input type="submit" value="Izmijeni" class="dugmad" name="submitIzmijeni'.$br.'"> </form>';
+  echo '</div>';
+  if($brojac%2==1){echo '</div>';}
+  $brojac=$brojac+1;
 }
+
+
 ?>
 
 

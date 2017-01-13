@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<poruke>
+<poruka>
+<email>amina.puce@gmail.com</email>
+<komentar>najj ste</komentar>
+</poruka>
+
+<poruka>
+<email>neki.mail@gmail.com</email>
+<komentar>bilo je divno iskustvo putovati sa vama. najj agencija</komentar>
+</poruka>
+
+<poruka><email>proba@gmail.com</email><komentar>proba</komentar></poruka>
+</poruke>

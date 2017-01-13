@@ -2,4 +2,9 @@
 <ponude>
 
 
-<ponuda><naziv>London</naziv><opis>5 dana dobrog provoda</opis><slika>London.jpg</slika><id>1</id></ponuda><ponuda><naziv>Budimpesta</naziv><opis>Studentski pohod</opis><slika>pocetna4.jpg</slika><id>2</id></ponuda><ponuda><naziv>Atina</naziv><opis>Studentski pohod</opis><slika>ponuda3.jpg</slika><id>3</id></ponuda><ponuda><naziv>Dubrovnik</naziv><opis>Docek Nove 2017. Godine</opis><slika>pocetna1.jpg</slika><id>4</id></ponuda></ponude>
+
+<ponuda><id>1</id><naziv>Venecija</naziv><opis>Predivno putovanje</opis><detaljanOpis>5 dana u prelijepoj Italiji</detaljanOpis><slika>ponuda1.jpg</slika><cijena>123</cijena></ponuda>
+<ponuda><id>2</id><naziv>London</naziv><opis>Predivno putovanje</opis><detaljanOpis>4 dana u prelijepoj Engleskoj</detaljanOpis><slika>London.jpg</slika><cijena>400</cijena></ponuda>
+<ponuda><id>3</id><naziv>Berlin</naziv><opis>Predivno putovanje</opis><detaljanOpis>5 dana u prelijepoj Njemackoj</detaljanOpis><slika>berlin1.jpg</slika><cijena>350</cijena></ponuda>
+<ponuda><id>4</id><naziv>Amsterdam</naziv><opis>Studentski pohod</opis><detaljanOpis>5 dana dobrog provoda</detaljanOpis><slika>amsterdam1.jpg</slika><cijena>350</cijena></ponuda>
+</ponude>

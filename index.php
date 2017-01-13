@@ -61,6 +61,7 @@ header("location: profile.php");
 
 
   <?php
+  /*
   $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
   $brojac=0;
 
@@ -69,6 +70,28 @@ header("location: profile.php");
     echo '<div id="pocetna1" class="red" style="background-image:url(slike/'.$ponuda->slika.'")"> ';
     echo '<h2>' . $ponuda->naziv . '</h2>';
     echo '<h4>' . $ponuda->opis . '</h4>';
+    echo '<form action="" method="get"> <input type="submit" value="Detalji" class="dugmad" name="submitDetalji'.$ponuda->id.'"> </form><br>';
+    echo '</div>';
+    if($brojac%2==1){echo '</div>';}
+    $brojac=$brojac+1;
+    if($brojac==4)break; // na naslovnoj se prikazuju samo 4 ponude;
+  }*/
+
+  $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+  $veza->exec("set names utf8");
+  $brojac=0;
+  $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
+  if (!$rezultat) {
+         $greska = $veza->errorInfo();
+         print "SQL greška: " . $greska[2];
+         exit();
+    }
+  foreach($rezultat as $ponuda) {
+    if($brojac%2==0){echo '<div class="kolona dva"> ';}
+    echo '<div id="pocetna1" class="red" style="background-image:url(slike/'.$ponuda["slika"].'")"> ';
+    echo '<h2>' . $ponuda["naziv"] . '</h2>';
+    echo '<h4>' . $ponuda["opis"] . '</h4>';
+    echo '<form action="" method="get"> <input type="submit" value="Detalji" class="dugmad" name="submitDetalji'.$ponuda["id"].'"> </form><br>';
     echo '</div>';
     if($brojac%2==1){echo '</div>';}
     $brojac=$brojac+1;
@@ -77,6 +100,48 @@ header("location: profile.php");
 
 
   ?>
+
+  <?php
+/*
+  $xml=new DomDocument("1.0", "ISO-8859-1");
+  $xml->load('ponude.xml');
+
+  $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
+  $idPosljednje=0;
+  foreach($xml->ponuda as $ponuda){
+    $idPosljednje=$ponuda->id;
+  }
+
+  for($p=1; $p<$idPosljednje+1; $p++){
+  if (isset($_GET["submitDetalji".$p])) {
+    $id_detalji=$p;
+    header("location: DetaljiTA.php?id_detalji=".$p);
+  }
+}*/
+
+$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza->exec("set names utf8");
+
+$idPosljednje=0;
+$rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
+
+if (!$rezultat) {
+       $greska = $veza->errorInfo();
+       print "SQL greška: " . $greska[2];
+       exit();
+  }
+
+  foreach ($rezultat as $ponuda) {
+    $idPosljednje=$ponuda["id"];
+  }
+
+  for($p=1; $p<$idPosljednje+1; $p++){
+  if (isset($_GET["submitDetalji".$p])) {
+    $id_detalji=$p;
+    header("location: DetaljiTA.php?id_detalji=".$p);
+  }
+}
+   ?>
 
   <div id="footer" class="red">
 
