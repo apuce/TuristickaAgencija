@@ -135,7 +135,7 @@ function showResult(s) {
    }
 
  }*/
- $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = ("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
  $veza->exec("set names utf8");
  $brojac=0;
  $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
@@ -177,7 +177,7 @@ $nazivPonude=$_GET["kljucnaRijec"];
    }
    */
 
-   $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+   $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
    $veza->exec("set names utf8");
    $brojac=0;
    $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
@@ -201,7 +201,7 @@ $nazivPonude=$_GET["kljucnaRijec"];
      ?>
 
 <?php
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
 $veza->exec("set names utf8");
 
 $idPosljednje=0;

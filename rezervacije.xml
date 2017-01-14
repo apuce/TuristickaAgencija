@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <rezervacije>
-<rezervacija><id>1</id><ime>n</ime><prezime>n</prezime><mail>n</mail><brTel>n</brTel><idPonude>2</idPonude></rezervacija></rezervacije>
+
+<rezervacija><ime>Amina</ime><prezime>Puce</prezime><mail>amina.p@gmail.com</mail><brTel>061/302-919</brTel><idPonude>1</idPonude></rezervacija>
+<rezervacija><ime>ProbaIme</ime><prezime>ProbaPrezime</prezime><mail>proba@gmail.com</mail><brTel>061/000-111</brTel><idPonude>1</idPonude></rezervacija>
+<rezervacija><ime>Dzenita</ime><prezime>Ljevo</prezime><mail>dljevo@gmail.com</mail><brTel>061/000-222</brTel><idPonude>2</idPonude></rezervacija>
+</rezervacije>

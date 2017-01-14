@@ -15,7 +15,7 @@ $xml=simplexml_load_file("ponude.xml") or die("Error: Cannot create object");
 
 $pdf->Ln(20);
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
 $veza->exec("set names utf8");
 
 $rezultat = $veza->query("select id,naziv,opis,detaljanOpis,slika,cijena from ponuda");

@@ -8,7 +8,7 @@ function zag() {
 function rest_get($request, $data) {
 
   $idPonude = $_GET['id'];
-  $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
+  $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
   $veza->exec("set names utf8");
 
   $upit = $veza->prepare("SELECT * FROM ponuda WHERE id=?");
@@ -24,7 +24,7 @@ return $rezultat;
 
 function rest_get_sve($request) {
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//  $veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
+  $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
   $veza->exec("set names utf8");
 
   $upit = $veza->prepare("SELECT * FROM ponuda");

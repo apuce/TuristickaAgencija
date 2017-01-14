@@ -77,7 +77,7 @@ header("location: profile.php");
     if($brojac==4)break; // na naslovnoj se prikazuju samo 4 ponude;
   }*/
 
-  $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+  $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
   $veza->exec("set names utf8");
   $brojac=0;
   $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");
@@ -119,7 +119,7 @@ header("location: profile.php");
   }
 }*/
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
 $veza->exec("set names utf8");
 
 $idPosljednje=0;

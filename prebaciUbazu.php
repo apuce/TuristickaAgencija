@@ -5,7 +5,7 @@ $xml3=simplexml_load_file("slike.xml") or die("Error: Cannot create object");
 $xml4=simplexml_load_file("rezAnkete.xml") or die("Error: Cannot create object");
 $xml5=simplexml_load_file("rezervacije.xml") or die("Error: Cannot create object");
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
      $veza->exec("set names utf8");
 
 //prebacivanje poruka
@@ -112,7 +112,7 @@ foreach($xml5->rezervacija as $rezervacijaXML){
          exit();
     }
   foreach($rezultat as $rezervacija) {
-  if($rezervacija['ime']==$rezervacijaXML->ime && $rezervacija['prezime']==$rezervacijaXML->prezime && $rezervacija['email']==$rezervacijaXML->email){
+  if($rezervacija['ime']==$rezervacijaXML->ime && $rezervacija['prezime']==$rezervacijaXML->prezime && $rezervacija['email']==$rezervacijaXML->mail){
   $postoji=true;
   }
 
@@ -120,7 +120,7 @@ foreach($xml5->rezervacija as $rezervacijaXML){
 
   if($postoji==false){
     $ubaci = $veza->query("insert into rezervacija (idPonude, email, ime, prezime, brTelefona)
-values ('".$rezervacijaXML->idPonude."', '".$rezervacijaXML->email."', '".$rezervacijaXML->ime."', '".$rezervacijaXML->prezime."', '".$rezervacijaXML->brTel."')");
+values ('".$rezervacijaXML->idPonude."', '".$rezervacijaXML->mail."', '".$rezervacijaXML->ime."', '".$rezervacijaXML->prezime."', '".$rezervacijaXML->brTel."')");
   }
 
 }

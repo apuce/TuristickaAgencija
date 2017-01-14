@@ -11,7 +11,7 @@ $q=$_GET["q"];
 if (strlen($q)>0) {
   $hint="";
 
-  $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+  $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
   $veza->exec("set names utf8");
 
   $rezultat = $veza->query("select * from ponuda");

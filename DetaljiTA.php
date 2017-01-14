@@ -26,7 +26,7 @@ header("location: profile.php");
 </div>
 
 <?php
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
 $veza->exec("set names utf8");
 $brojac=0;
 $rezultat = $veza->query("select id,naziv,opis,slika,detaljanOpis,cijena from ponuda");
@@ -90,7 +90,7 @@ foreach($xml->ponuda as $ponuda){
    }
  }*/
 
- $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
  $veza->exec("set names utf8");
  $brojSlike=0;
  $rezultat = $veza->query("select idPonude,naziv from slika");
@@ -146,7 +146,7 @@ foreach($xml->ponuda as $ponuda){
 
     <?php
 
-    $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+  $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
     $veza->exec("set names utf8");
     if (isset($_POST["submitRezervacija"])) {
 

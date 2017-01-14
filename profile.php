@@ -114,7 +114,7 @@ include('downloadCSV.php');
               $id=$ponuda->id;
             }*/
 
-            $veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+            $veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
             $veza->exec("set names utf8");
             $id=0;
             $rezultat = $veza->query("select id from ponuda");
@@ -160,7 +160,7 @@ foreach($xml->ponuda as $ponuda){
   $brojac=$brojac+1;
 }*/
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
 $veza->exec("set names utf8");
 $brojac=0;
 $rezultat = $veza->query("select id,naziv,opis,slika from ponuda");

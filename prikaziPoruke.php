@@ -8,7 +8,7 @@ foreach($xml->poruka as $poruka){
   echo '<h4> poruka:  ' . $poruka->komentar . '</h4><br>';
 }*/
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO("mysql:dbname=ta;host=localhost;charset=utf8", "tauser", "tapass");
 $veza->exec("set names utf8");
 
 $rezultat = $veza->query("select email,tekst from poruka");

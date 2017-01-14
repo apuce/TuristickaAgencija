@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2017 at 11:59 PM
+-- Generation Time: Jan 14, 2017 at 05:34 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -148,8 +148,7 @@ CREATE TABLE `rezervacija` (
 INSERT INTO `rezervacija` (`id`, `idPonude`, `email`, `ime`, `prezime`, `brTelefona`) VALUES
 (1, 1, 'amina.p@gmail.com', 'Amina', 'Puce', '061/302-919'),
 (2, 1, 'proba@gmail.com', 'ProbaIme', 'ProbaPrezime', '061/000-111'),
-(3, 2, 'dljevo@gmail.com', 'Dzenita', 'Ljevo', '061/000-222'),
-(5, 2, '', 'n', 'n', 'n');
+(3, 2, 'dljevo@gmail.com', 'Dzenita', 'Ljevo', '061/000-222');
 
 -- --------------------------------------------------------
 
@@ -251,7 +250,7 @@ ALTER TABLE `poruka`
 -- AUTO_INCREMENT for table `rezervacija`
 --
 ALTER TABLE `rezervacija`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `slika`
 --

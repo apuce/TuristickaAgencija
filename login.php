@@ -33,7 +33,7 @@ $xml=simplexml_load_file("korisnici.xml") or die("Error: Cannot create object");
  }
 }*/
 
-$veza = new PDO("mysql:dbname=ta;host=mysql-57-centos7", "tauser", "tapass");//$veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
+$veza = new PDO("mysql:dbname=ta;host=mysql-55-centos7", "tauser", "tapass");//$veza = new PDO('mysql:host=localhost;dbname=ta;charset=utf8', 'tauser', 'tapass');
 $veza->exec("set names utf8");
 
 $upit = $veza->prepare("SELECT * FROM korisnik WHERE username=:us");
