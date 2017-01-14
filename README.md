@@ -57,6 +57,8 @@ login.php, session.php, logout.php
 php skripte za prikaz podataka adminu:
 prikaziPoruke.php, prikaziOcjene.php, prikaziRezervacije.php  
 
+prebaciUbazu.php: php skripta koja prebacuje u bazu sve što postoji u xmlu, a nema u bazi  
+
 restMethod.php: metoda web servisa koja vraća podatke u obliku JSON-a  
 
 ta.sql: exportovana baza  
